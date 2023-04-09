@@ -19,6 +19,8 @@
 		71F6EF8D29E2EF4400B4C15A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 71F6EF8C29E2EF4400B4C15A /* CombineCocoa */; };
 		71F6EF9029E2EF5D00B4C15A /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 71F6EF8F29E2EF5D00B4C15A /* SnapshotTesting */; };
 		71F6EF9229E2EF6900B4C15A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 71F6EF9129E2EF6900B4C15A /* CombineCocoa */; };
+		71F6EF9529E2EFDA00B4C15A /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6EF9429E2EFDA00B4C15A /* ViewConfiguration.swift */; };
+		71F6EF9829E2EFEF00B4C15A /* UIViews+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6EF9729E2EFEF00B4C15A /* UIViews+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7145DC3729E2E6C3000254D3 /* tip-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tip-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7145DC3B29E2E6C3000254D3 /* tip_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITests.swift; sourceTree = "<group>"; };
 		7145DC3D29E2E6C3000254D3 /* tip_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71F6EF9429E2EFDA00B4C15A /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		71F6EF9729E2EFEF00B4C15A /* UIViews+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViews+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		7145DC1929E2E6C0000254D3 /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				71F6EF9629E2EFE700B4C15A /* Extensions */,
+				71F6EF9329E2EFD200B4C15A /* Protocols */,
 				7145DC1A29E2E6C0000254D3 /* AppDelegate.swift */,
 				7145DC1C29E2E6C0000254D3 /* SceneDelegate.swift */,
 				7145DC1E29E2E6C0000254D3 /* ViewController.swift */,
@@ -138,6 +144,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71F6EF9329E2EFD200B4C15A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				71F6EF9429E2EFDA00B4C15A /* ViewConfiguration.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		71F6EF9629E2EFE700B4C15A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71F6EF9729E2EFEF00B4C15A /* UIViews+Constraints.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7145DC1F29E2E6C0000254D3 /* ViewController.swift in Sources */,
+				71F6EF9529E2EFDA00B4C15A /* ViewConfiguration.swift in Sources */,
 				7145DC1B29E2E6C0000254D3 /* AppDelegate.swift in Sources */,
+				71F6EF9829E2EFEF00B4C15A /* UIViews+Constraints.swift in Sources */,
 				7145DC1D29E2E6C0000254D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
