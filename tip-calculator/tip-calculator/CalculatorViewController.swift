@@ -54,7 +54,6 @@ extension CalculatorViewController: ViewConfiguration {
                                                         bottom: 24,
                                                         right: 24))
         
-        logoView.size(height: 48)
         resultView.size(height: 224)
         billInputView.size(height: 56)
         tipInputView.size(height: 130)

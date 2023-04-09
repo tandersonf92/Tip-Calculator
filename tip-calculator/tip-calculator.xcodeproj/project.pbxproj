@@ -29,6 +29,7 @@
 		71F6EFA629E2F7F000B4C15A /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6EFA529E2F7F000B4C15A /* ThemeColor.swift */; };
 		71F6EFA829E2F7F600B4C15A /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6EFA729E2F7F600B4C15A /* ThemeFont.swift */; };
 		71F6EFAA29E2F82600B4C15A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6EFA929E2F82600B4C15A /* UIColor+Extensions.swift */; };
+		71F6EFAF29E2FED900B4C15A /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6EFAE29E2FED900B4C15A /* LabelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		71F6EFA529E2F7F000B4C15A /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		71F6EFA729E2F7F600B4C15A /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		71F6EFA929E2F82600B4C15A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		71F6EFAE29E2FED900B4C15A /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		7145DC1929E2E6C0000254D3 /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				71F6EFAD29E2FECE00B4C15A /* Factory */,
 				71F6EFA429E2F7E400B4C15A /* Config */,
 				71F6EF9929E2F09C00B4C15A /* Views */,
 				71F6EF9629E2EFE700B4C15A /* Extensions */,
@@ -200,6 +203,14 @@
 				71F6EFA729E2F7F600B4C15A /* ThemeFont.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		71F6EFAD29E2FECE00B4C15A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				71F6EFAE29E2FED900B4C15A /* LabelFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +360,7 @@
 				71F6EFA829E2F7F600B4C15A /* ThemeFont.swift in Sources */,
 				7145DC1F29E2E6C0000254D3 /* CalculatorViewController.swift in Sources */,
 				71F6EF9B29E2F0A200B4C15A /* LogoView.swift in Sources */,
+				71F6EFAF29E2FED900B4C15A /* LabelFactory.swift in Sources */,
 				71F6EFAA29E2F82600B4C15A /* UIColor+Extensions.swift in Sources */,
 				71F6EF9529E2EFDA00B4C15A /* ViewConfiguration.swift in Sources */,
 				7145DC1B29E2E6C0000254D3 /* AppDelegate.swift in Sources */,
