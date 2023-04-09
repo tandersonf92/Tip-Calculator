@@ -17,9 +17,13 @@ final class CalculatorViewController: UIViewController {
     }()
     
     private lazy var logoView: LogoView = LogoView()
+    
     private lazy var resultView: ResultView = ResultView()
+    
     private lazy var billInputView: BillInputView = BillInputView()
+    
     private lazy var tipInputView: TipInputView = TipInputView()
+    
     private lazy var splitInputView: SplitInputView = SplitInputView()
     
     override func viewDidLoad() {
@@ -51,7 +55,7 @@ extension CalculatorViewController: ViewConfiguration {
                                                         left: 24,
                                                         bottom: 24,
                                                         right: 24))
-        
+        logoView.size(height: 48)
         resultView.size(height: 224)
         billInputView.size(height: 56)
         tipInputView.size(height: 130)

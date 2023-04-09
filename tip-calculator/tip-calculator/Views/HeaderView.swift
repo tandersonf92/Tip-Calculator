@@ -30,7 +30,6 @@ final class HeaderView: UIView {
     
     private lazy var bottomSpacerView: UIView = UIView()
     
-    
     // MARK: Life Cycle
     init(topText: String, bottomText: String) {
         self.topText = topText
@@ -59,4 +58,3 @@ extension HeaderView: ViewConfiguration {
         contentStackView.setAnchorsEqual(to: self)
     }
 }
-
