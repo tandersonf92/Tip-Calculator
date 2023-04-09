@@ -12,8 +12,7 @@ final class TipInputView: UIView {
     // MARK: Properties
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 16
-        stackView.distribution = .fillProportionally
+        stackView.spacing = 12
         return stackView
     }()
     
@@ -26,11 +25,9 @@ final class TipInputView: UIView {
     private lazy var headerView: HeaderView = HeaderView(topText: "Choose",
                                                          bottomText: "your tip")
     
-    private lazy var bottomHeaderSpacerView: UIView = UIView()
-    
     private lazy var tipButtonsStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 8
+        stackView.spacing = 12
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         return stackView
@@ -40,7 +37,6 @@ final class TipInputView: UIView {
         let stackView = UIStackView()
         stackView.spacing = 16
         stackView.distribution = .fillEqually
-        stackView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return stackView
     }()
     
@@ -51,7 +47,7 @@ final class TipInputView: UIView {
     private lazy var twentyPercentTipButton: UIButton = buildTipButton(tip: .twentyPercente)
     
     private lazy var customTipButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.setTitle("Custom tip", for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         button.backgroundColor = ThemeColor.primary
@@ -87,9 +83,7 @@ final class TipInputView: UIView {
 
 // MARK: ViewConfiguration
 extension TipInputView: ViewConfiguration {
-    func configViews() {
-        backgroundColor = .yellow
-    }
+    func configViews() { }
     
     func buildViews() {
         addSubview(contentStackView)

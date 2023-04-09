@@ -52,9 +52,7 @@ final class AmountView: UIView {
 
 // MARK: ViewConfiguration
 extension AmountView: ViewConfiguration {
-    func configViews() {
-//        backgroundColor = .red
-    }
+    func configViews() { }
     
     func buildViews() {
         addSubview(contentStackView)
@@ -66,4 +64,3 @@ extension AmountView: ViewConfiguration {
         contentStackView.setAnchorsEqual(to: self)
     }
 }
-

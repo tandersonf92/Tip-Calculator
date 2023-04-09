@@ -26,7 +26,7 @@ final class HeaderView: UIView {
                                                             font: ThemeFont.bold(ofSize: 18))
     
     private lazy var bottomLabel: UILabel = LabelFactory.build(text: bottomText,
-                                                            font: ThemeFont.regular(ofSize: 16))
+                                                               font: ThemeFont.regular(ofSize: 16))
     
     private lazy var bottomSpacerView: UIView = UIView()
     
