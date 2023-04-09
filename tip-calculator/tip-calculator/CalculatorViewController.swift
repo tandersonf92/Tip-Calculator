@@ -12,11 +12,10 @@ final class CalculatorViewController: UIViewController {
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-//        stackView.distribution = .fillEqually
         stackView.spacing = 36
         return stackView
     }()
-
+    
     private lazy var logoView: LogoView = LogoView()
     private lazy var resultView: ResultView = ResultView()
     private lazy var billInputView: BillInputView = BillInputView()
