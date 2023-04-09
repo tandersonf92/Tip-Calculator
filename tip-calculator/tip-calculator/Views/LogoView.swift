@@ -13,7 +13,6 @@ final class LogoView: UIView {
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 8
-//        stackView.alignment = .center
         return stackView
     }()
     
@@ -44,9 +43,6 @@ final class LogoView: UIView {
     
     private lazy var bottomLabel: UILabel = LabelFactory.build(text: "Calculator",
                                                                font: ThemeFont.demiBold(ofSize: 20))
-    
-    
-    
     
     // MARK: Life Cycle
     init() {
