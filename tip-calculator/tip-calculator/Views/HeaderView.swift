@@ -48,13 +48,13 @@ extension HeaderView: ViewConfiguration {
     
     func buildViews() {
         addSubview(contentStackView)
-        [topSpacerView,
-         topLabel,
+         [topLabel,
          bottomLabel,
          bottomSpacerView].forEach(contentStackView.addArrangedSubview)
     }
     
     func setupConstraints() {
         contentStackView.setAnchorsEqual(to: self)
+        self.size(width: 70)
     }
 }

@@ -84,8 +84,7 @@ extension ResultView: ViewConfiguration {
          amountPerPersonLabel,
          horizontalLineView,
          buildSpacerView(height: 0),
-         horizontalAmoutComponentsStackView,
-         UIView()].forEach(contentStackView.addArrangedSubview)
+         horizontalAmoutComponentsStackView].forEach(contentStackView.addArrangedSubview)
         [amountView1, spacerView, amountView2].forEach(horizontalAmoutComponentsStackView.addArrangedSubview)
     }
     

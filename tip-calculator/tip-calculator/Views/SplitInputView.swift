@@ -12,7 +12,7 @@ final class SplitInputView: UIView {
     // MARK: Properties
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.spacing = 16
+        stackView.spacing = 12
         return stackView
     }()
     
