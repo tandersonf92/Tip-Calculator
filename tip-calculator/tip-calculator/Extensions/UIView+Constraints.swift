@@ -46,14 +46,18 @@ extension UIView {
     // MARK: Height and Width functions
     func size(height: CGFloat? = nil, width: CGFloat? = nil) {
         if let height = height { self.heightAnchor.constraint(equalToConstant: height).isActive = true }
-        if let width = width { self.heightAnchor.constraint(equalToConstant: width).isActive = true }
+        if let width = width { self.widthAnchor.constraint(equalToConstant: width).isActive = true }
     }
     
-    func equalWidth(to reference: UIView) {
+    func asSquare(sideValue: CGFloat) {
+        self.size(height: sideValue, width: sideValue)
+    }
+    
+    func equalsWidth(to reference: UIView) {
         self.widthAnchor.constraint(equalTo: reference.widthAnchor).isActive = true
     }
     
-    func equalHeight(to reference: UIView) {
+    func equalsHeight(to reference: UIView) {
         self.heightAnchor.constraint(equalTo: reference.heightAnchor).isActive = true
     }
     
