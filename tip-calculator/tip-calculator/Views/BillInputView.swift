@@ -5,9 +5,19 @@
 //  Created by Anderson Oliveira on 09/04/23.
 //
 
+import Combine
+import CombineCocoa
 import UIKit
 
 final class BillInputView: UIView {
+    
+    private var cancellables: Set<AnyCancellable> = Set<AnyCancellable>()
+    
+    private let billSubject: PassthroughSubject<Double, Never> = .init()
+    
+    var valuePublisher: AnyPublisher<Double, Never> {
+        billSubject.eraseToAnyPublisher()
+    }
     
     // MARK: Properties
     private lazy var contentStackView: UIStackView = {
@@ -76,6 +86,7 @@ final class BillInputView: UIView {
     init() {
         super.init(frame: .zero)
         setupViews()
+        observe()
     }
     
     @available(*, unavailable)
@@ -84,6 +95,13 @@ final class BillInputView: UIView {
     // MARK: Selectors
     @objc private func doneButtonTapped() {
         textField.endEditing(true)
+    }
+    
+    private func observe() {
+        textField.textPublisher.sink { [weak self] text in
+            print("TEXT: \(text)")
+            self?.billSubject.send(text?.doubleValue ?? 0)
+        }.store(in: &cancellables)
     }
 }
 

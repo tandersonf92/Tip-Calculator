@@ -21,7 +21,14 @@ final class CalculatorViewModel {
         let updateViewPublisher: AnyPublisher<Result, Never>
     }
     
+    private var cancellables = Set<AnyCancellable>()
+    
     func transform(input: Input) -> Output {
+
+        input.billPublisher.sink { bill in
+            print("the biruleibe: \(bill)")
+        }
+
         let result = Result(amountPerPerson: 500,
                             totalBill: 1000,
                             totalTip: 50.0)

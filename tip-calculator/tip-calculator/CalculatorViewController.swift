@@ -38,7 +38,7 @@ final class CalculatorViewController: UIViewController {
     
     // MARK: Private functions
     private func bind() {
-        let input = CalculatorViewModel.Input(billPublisher: Just(10).eraseToAnyPublisher(),
+        let input = CalculatorViewModel.Input(billPublisher: billInputView.valuePublisher,
                                               tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
                                               splitPublisher: Just(5).eraseToAnyPublisher())
         
@@ -48,8 +48,6 @@ final class CalculatorViewController: UIViewController {
             print(">>>>>> >> >> \(result)")
         }.store(in: &cancellables)
     }
-    
-    
 }
 
 extension CalculatorViewController: ViewConfiguration {
