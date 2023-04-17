@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7119823C29ED61C800350645 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119823B29ED61C800350645 /* String+Extensions.swift */; };
+		7119823E29ED6CAE00350645 /* UIResponder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119823D29ED6CAE00350645 /* UIResponder+Extensions.swift */; };
 		7145DC1B29E2E6C0000254D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC1A29E2E6C0000254D3 /* AppDelegate.swift */; };
 		7145DC1D29E2E6C0000254D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC1C29E2E6C0000254D3 /* SceneDelegate.swift */; };
 		7145DC1F29E2E6C0000254D3 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC1E29E2E6C0000254D3 /* CalculatorViewController.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		7119823B29ED61C800350645 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7119823D29ED6CAE00350645 /* UIResponder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extensions.swift"; sourceTree = "<group>"; };
 		7145DC1729E2E6C0000254D3 /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7145DC1A29E2E6C0000254D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7145DC1C29E2E6C0000254D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				71F6EFA929E2F82600B4C15A /* UIColor+Extensions.swift */,
 				71F6EFB229E3121400B4C15A /* UIView+Extensions.swift */,
 				7119823B29ED61C800350645 /* String+Extensions.swift */,
+				7119823D29ED6CAE00350645 /* UIResponder+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				71F6EF9B29E2F0A200B4C15A /* LogoView.swift in Sources */,
 				71F6EFAF29E2FED900B4C15A /* LabelFactory.swift in Sources */,
 				71F6EFAA29E2F82600B4C15A /* UIColor+Extensions.swift in Sources */,
+				7119823E29ED6CAE00350645 /* UIResponder+Extensions.swift in Sources */,
 				715B09DA29E42E3B00F6293E /* Result.swift in Sources */,
 				71F6EFB529E31D9500B4C15A /* HeaderView.swift in Sources */,
 				71F6EF9529E2EFDA00B4C15A /* ViewConfiguration.swift in Sources */,
