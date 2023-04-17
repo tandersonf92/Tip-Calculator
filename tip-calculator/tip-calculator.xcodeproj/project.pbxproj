@@ -15,6 +15,8 @@
 		7145DC3229E2E6C3000254D3 /* tip_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC3129E2E6C3000254D3 /* tip_calculatorTests.swift */; };
 		7145DC3C29E2E6C3000254D3 /* tip_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC3B29E2E6C3000254D3 /* tip_calculatorUITests.swift */; };
 		7145DC3E29E2E6C3000254D3 /* tip_calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC3D29E2E6C3000254D3 /* tip_calculatorUITestsLaunchTests.swift */; };
+		715B09D829E42D6000F6293E /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B09D729E42D6000F6293E /* CalculatorViewModel.swift */; };
+		715B09DA29E42E3B00F6293E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715B09D929E42E3B00F6293E /* Result.swift */; };
 		71D8B48C29E353E4008D2E0F /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D8B48B29E353E4008D2E0F /* Tip.swift */; };
 		71F6EF8A29E2EF3500B4C15A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 71F6EF8929E2EF3500B4C15A /* CombineCocoa */; };
 		71F6EF8D29E2EF4400B4C15A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 71F6EF8C29E2EF4400B4C15A /* CombineCocoa */; };
@@ -66,6 +68,8 @@
 		7145DC3729E2E6C3000254D3 /* tip-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tip-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7145DC3B29E2E6C3000254D3 /* tip_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITests.swift; sourceTree = "<group>"; };
 		7145DC3D29E2E6C3000254D3 /* tip_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		715B09D729E42D6000F6293E /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		715B09D929E42E3B00F6293E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		71D8B48B29E353E4008D2E0F /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		71F6EF9429E2EFDA00B4C15A /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
 		71F6EF9729E2EFEF00B4C15A /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		7145DC1929E2E6C0000254D3 /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				715B09D629E42D4F00F6293E /* ViewModel */,
 				71D8B48A29E353D8008D2E0F /* Model */,
 				71F6EFAD29E2FECE00B4C15A /* Factory */,
 				71F6EFA429E2F7E400B4C15A /* Config */,
@@ -169,10 +174,19 @@
 			path = "tip-calculatorUITests";
 			sourceTree = "<group>";
 		};
+		715B09D629E42D4F00F6293E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				715B09D729E42D6000F6293E /* CalculatorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		71D8B48A29E353D8008D2E0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				71D8B48B29E353E4008D2E0F /* Tip.swift */,
+				715B09D929E42E3B00F6293E /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,9 +397,11 @@
 				71F6EF9B29E2F0A200B4C15A /* LogoView.swift in Sources */,
 				71F6EFAF29E2FED900B4C15A /* LabelFactory.swift in Sources */,
 				71F6EFAA29E2F82600B4C15A /* UIColor+Extensions.swift in Sources */,
+				715B09DA29E42E3B00F6293E /* Result.swift in Sources */,
 				71F6EFB529E31D9500B4C15A /* HeaderView.swift in Sources */,
 				71F6EF9529E2EFDA00B4C15A /* ViewConfiguration.swift in Sources */,
 				7145DC1B29E2E6C0000254D3 /* AppDelegate.swift in Sources */,
+				715B09D829E42D6000F6293E /* CalculatorViewModel.swift in Sources */,
 				71F6EFA329E2F1BE00B4C15A /* SplitInputView.swift in Sources */,
 				71F6EFA129E2F1A300B4C15A /* TipInputView.swift in Sources */,
 				71F6EFA629E2F7F000B4C15A /* ThemeColor.swift in Sources */,
