@@ -5,9 +5,13 @@
 //  Created by Anderson Oliveira on 09/04/23.
 //
 
+import Combine
 import UIKit
 
 final class CalculatorViewController: UIViewController {
+    
+    private let viewModel = CalculatorViewModel()
+    private var cancellables = Set<AnyCancellable>()
     
     private lazy var contentStackView: UIStackView = {
         let stackView = UIStackView()
@@ -29,6 +33,20 @@ final class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        bind()
+    }
+    
+    // MARK: Private functions
+    private func bind() {
+        let input = CalculatorViewModel.Input(billPublisher: billInputView.valuePublisher,
+                                              tipPublisher: tipInputView.valuePublisher,
+                                              splitPublisher: Just(5).eraseToAnyPublisher())
+        
+        let output = viewModel.transform(input: input)
+        
+        output.updateViewPublisher.sink { result in
+            print(">>>>>> >> >> \(result)")
+        }.store(in: &cancellables)
     }
 }
 
