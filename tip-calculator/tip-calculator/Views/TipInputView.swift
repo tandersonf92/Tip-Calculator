@@ -5,9 +5,18 @@
 //  Created by Anderson Oliveira on 09/04/23.
 //
 
+import Combine
+import CombineCocoa
 import UIKit
 
 final class TipInputView: UIView {
+    
+    
+    private var cancellables: Set<AnyCancellable> = .init()
+    private let tipSubject: CurrentValueSubject<Tip, Never> = .init(.none)
+    var valuePublisher: AnyPublisher<Tip, Never> {
+        tipSubject.eraseToAnyPublisher()
+    }
     
     // MARK: Properties
     private lazy var contentStackView: UIStackView = {
@@ -40,11 +49,32 @@ final class TipInputView: UIView {
         return stackView
     }()
     
-    private lazy var tenPercentTipButton: UIButton = buildTipButton(tip: .tenPercent)
+    private lazy var tenPercentTipButton: UIButton = {
+        let button = buildTipButton(tip: .tenPercent)
+        button.tapPublisher.flatMap {
+            Just(Tip.tenPercent)
+        }.assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
+        return button
+    }()
     
-    private lazy var fifteenPercentTipButton: UIButton = buildTipButton(tip: .fifteenPercent)
+    private lazy var fifteenPercentTipButton: UIButton = {
+        let button = buildTipButton(tip: .fifteenPercent)
+        button.tapPublisher.flatMap {
+            Just(Tip.fifteenPercent)
+        }.assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
+        return button
+    }()
     
-    private lazy var twentyPercentTipButton: UIButton = buildTipButton(tip: .twentyPercente)
+    private lazy var twentyPercentTipButton: UIButton = {
+        let button = buildTipButton(tip: .twentyPercent)
+        button.tapPublisher.flatMap {
+            Just(Tip.twentyPercent)
+        }.assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
+        return button
+    }()
     
     private lazy var customTipButton: UIButton = {
         let button = UIButton()

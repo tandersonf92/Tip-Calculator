@@ -25,9 +25,9 @@ final class CalculatorViewModel {
     
     func transform(input: Input) -> Output {
 
-        input.billPublisher.sink { bill in
-            print("the biruleibe: \(bill)")
-        }
+        input.tipPublisher.sink { tip in
+            print("the tip: \(tip)")
+        }.store(in: &cancellables)
 
         let result = Result(amountPerPerson: 500,
                             totalBill: 1000,
