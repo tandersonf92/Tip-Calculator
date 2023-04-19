@@ -37,7 +37,7 @@ final class CalculatorViewModel {
                                     totalBill: totalBill,
                                     totalTip: totalTip)
                 
-//            return Just(result)
+            return Just(result)
             }.eraseToAnyPublisher()
         return Output(updateViewPublisher: updateViewPublisher)
     }
