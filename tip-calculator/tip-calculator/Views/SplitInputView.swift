@@ -4,7 +4,8 @@
 //
 //  Created by Anderson Oliveira on 09/04/23.
 //
-
+import Combine
+import CombineCocoa
 import UIKit
 
 final class SplitInputView: UIView {
@@ -20,11 +21,17 @@ final class SplitInputView: UIView {
     
     private lazy var buttonsContentStackView: UIStackView = UIStackView()
     
-    private lazy var decrementButton: UIButton = buildButton(
+    private lazy var decrementButton: UIButton = {
+       let button = buildButton(
         text: "-",
         corners: [.layerMinXMaxYCorner,
-                  .layerMinXMinYCorner]
-    )
+                  .layerMinXMinYCorner])
+        button.tapPublisher.flatMap { [unowned self] _ in
+            Just(splitSubject.value == 1 ? 1 : splitSubject.value - 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
+        return button
+    }()
     
     private lazy var quantityLabel: UILabel = LabelFactory.build(
         text: "1",
@@ -33,16 +40,31 @@ final class SplitInputView: UIView {
         textAlignment: .center
     )
     
-    private lazy var incrementButton: UIButton = buildButton(
-        text: "+",
-        corners: [.layerMaxXMinYCorner,
-                  .layerMaxXMaxYCorner]
-    )
+    private lazy var incrementButton: UIButton = {
+        let button = buildButton(
+            text: "+",
+            corners: [.layerMaxXMinYCorner,
+                      .layerMaxXMaxYCorner]
+        )
+        button.tapPublisher.flatMap { [unowned self] _ in
+            Just(splitSubject.value + 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
+        return button
+    }()
+    
+    private let splitSubject: CurrentValueSubject<Int, Never> = .init(1)
+    var valuePublisher: AnyPublisher<Int,Never> {
+        splitSubject.removeDuplicates().eraseToAnyPublisher()
+    }
+    
+    private var cancellables = Set<AnyCancellable>()
     
     // MARK: Life Cycle
     init() {
         super.init(frame: .zero)
         setupViews()
+        observe()
     }
     
     @available(*, unavailable)
@@ -56,6 +78,12 @@ final class SplitInputView: UIView {
         button.addRoundedCorners(corners: corners, radius: 8.0)
         button.backgroundColor = ThemeColor.primary
         return button
+    }
+    
+    private func observe() {
+        splitSubject.sink { [unowned self] quantity in
+            quantityLabel.text = quantity.stringValue
+        }.store(in: &cancellables)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7113AB7129F0097D0059B1AD /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113AB7029F0097D0059B1AD /* Int+Extensions.swift */; };
 		7119823C29ED61C800350645 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119823B29ED61C800350645 /* String+Extensions.swift */; };
 		7119823E29ED6CAE00350645 /* UIResponder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119823D29ED6CAE00350645 /* UIResponder+Extensions.swift */; };
 		7145DC1B29E2E6C0000254D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145DC1A29E2E6C0000254D3 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7113AB7029F0097D0059B1AD /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		7119823B29ED61C800350645 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		7119823D29ED6CAE00350645 /* UIResponder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extensions.swift"; sourceTree = "<group>"; };
 		7145DC1729E2E6C0000254D3 /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +220,7 @@
 				71F6EFB229E3121400B4C15A /* UIView+Extensions.swift */,
 				7119823B29ED61C800350645 /* String+Extensions.swift */,
 				7119823D29ED6CAE00350645 /* UIResponder+Extensions.swift */,
+				7113AB7029F0097D0059B1AD /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				715B09D829E42D6000F6293E /* CalculatorViewModel.swift in Sources */,
 				71F6EFA329E2F1BE00B4C15A /* SplitInputView.swift in Sources */,
 				71F6EFA129E2F1A300B4C15A /* TipInputView.swift in Sources */,
+				7113AB7129F0097D0059B1AD /* Int+Extensions.swift in Sources */,
 				71F6EFA629E2F7F000B4C15A /* ThemeColor.swift in Sources */,
 				71F6EF9F29E2F18E00B4C15A /* BillInputView.swift in Sources */,
 				71F6EFB129E30D6B00B4C15A /* AmountView.swift in Sources */,
